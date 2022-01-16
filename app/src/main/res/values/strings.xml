@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Garden 113</string>
+    <string name="terminal_out__default">Nothing to log</string>
+    <string name="waterbutton_off">Water Closed</string>
+    <string name="lightbutton_off">Lights Off</string>
+    <string name="waterbutton_on">Water Open</string>
+    <string name="lightbutton_on">Lights On</string>
 </resources>
