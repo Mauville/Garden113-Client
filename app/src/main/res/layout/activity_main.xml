@@ -8,37 +8,51 @@
 
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="409dp"
-            android:layout_height="354dp"
-            tools:layout_editor_absoluteX="1dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="1dp">
+            android:layout_marginTop="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent">
 
         <ToggleButton
                 android:text="@string/lightbutton_off"
-                android:layout_width="match_parent"
+                android:layout_width="194dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/toggleButton2"
                 android:textColor="#455A64"
                 tools:textOff="@string/lightbutton_off"
                 tools:textOn="@string/lightbutton_on"
-                android:checked="false" />
+                android:checked="false"
+                android:textOff="@string/lightbutton_off"
+                android:textOn="@string/lightbutton_on" />
 
         <ToggleButton
                 android:text="@string/waterbutton_off"
-                android:layout_width="match_parent"
+                android:layout_width="194dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/toggleButton"
                 tools:textOff="@string/waterbutton_off"
                 tools:textOn="@string/waterbutton_on"
-                android:textColor="#455A64" />
+                android:textColor="#455A64"
+                android:textOff="@string/waterbutton_off"
+                android:textOn="@string/waterbutton_on" />
 
-        <TextView
-                android:text="@string/terminal_out__default"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView" />
+        <ScrollView
+                android:layout_width="fill_parent"
+                android:fillViewport="true"
+                android:layout_height="match_parent">
 
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?android:textColorPrimary"
+                    android:padding="20dp"
+                    android:id="@+id/logView" />
+        </ScrollView>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
