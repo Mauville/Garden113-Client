@@ -4,13 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.widget.TextView
+import me.aflak.arduino.Arduino
 import ml.hyperpotion.garden113.AndroidWebServer
 import java.net.Inet4Address
 import java.net.NetworkInterface
 import java.util.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity  : AppCompatActivity() {
+    private val arduino: Arduino
     private val port = 4113
     private var running = false
     private var ws: AndroidWebServer = AndroidWebServer(port)
